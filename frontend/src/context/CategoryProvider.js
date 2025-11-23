@@ -12,7 +12,7 @@ export const CategoryProvider = (props) => {
   const [categories, setCategories] = useState(null);
 
   const fetchCategories = async () => {
-    const url = `${host}/auth/category/fetchcategories`;
+    const url = `${host}/api/category/fetchcategories`;
 
     try {
       const response = await fetch(url, {
@@ -38,7 +38,7 @@ export const CategoryProvider = (props) => {
   };
 
   const addCategory = async (category) => {
-    const url = `${host}/auth/category/addcategory`;
+    const url = `${host}/api/category/addcategory`;
 
     try {
       const response = await fetch(url, {
@@ -67,7 +67,7 @@ export const CategoryProvider = (props) => {
   };
 
   const deleteCategory = async (id) => {
-    const url = `${host}/auth/category/deletecategory/${id}`;
+    const url = `${host}/api/category/deletecategory/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -94,7 +94,7 @@ export const CategoryProvider = (props) => {
 
   const updateCategory = async (categoryItem) => {
     const { id, category } = categoryItem;
-    const url = `${host}/auth/category/updatecategory/${id}`;
+    const url = `${host}/api/category/updatecategory/${id}`;
 
     try {
       const response = await fetch(url, {
