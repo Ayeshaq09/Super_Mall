@@ -12,7 +12,7 @@ export const ProductProvider = (props) => {
   const [products, setProducts] = useState(null);
 
   const fetchProducts = async () => {
-    const url = `${host}/product/fetchproducts`;
+    const url = `${host}/api/product/fetchproducts`;
 
     try {
       const response = await fetch(url, {
@@ -38,7 +38,7 @@ export const ProductProvider = (props) => {
   };
 
   const addProduct = async (product) => {
-    const url = `${host}/product/addproduct`;
+    const url = `${host}/api/product/addproduct`;
 
     const {
       productName,
@@ -88,7 +88,7 @@ export const ProductProvider = (props) => {
   };
 
   const updateProductImage = async (id, productImage) => {
-    const url = `${host}/product/updateproductimage/${id}`;
+    const url = `${host}/api/product/updateproductimage/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -116,7 +116,7 @@ export const ProductProvider = (props) => {
   };
 
   const deleteProduct = async (id) => {
-    const url = `${host}/product/deleteProduct/${id}`;
+    const url = `${host}/api/product/deleteProduct/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -142,7 +142,7 @@ export const ProductProvider = (props) => {
   };
 
   const updateProduct = async (id, product) => {
-    const url = `${host}/product/updateproduct/${id}`;
+    const url = `${host}/api/product/updateproduct/${id}`;
     const {
       productName,
       description,
