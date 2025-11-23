@@ -6,10 +6,15 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-  origin: "http://localhost:3000",  
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "auth-token"],
+    origin: [
+        "http://localhost:3000",
+        "https://super-mall-frontend.onrender.com"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "auth-token"],
 }));
+
 app.use(express.json({ limit: "10mb" })); 
 app.use(express.urlencoded({ limit: "10mb", extended: true }));
 
