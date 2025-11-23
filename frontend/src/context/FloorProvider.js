@@ -12,7 +12,7 @@ export const FloorProvider = (props) => {
   const [floors, setFloors] = useState([]);
 
   const fetchFloors = async () => {
-    const url = `${host}/floor/fetchfloors`;
+    const url = `${host}/api/floor/fetchfloors`;
 
     try {
       const response = await fetch(url, {
@@ -38,7 +38,7 @@ export const FloorProvider = (props) => {
   };
 
   const addFloor = async (floor) => {
-    const url = `${host}/floor/addfloor`;
+    const url = `${host}/api/floor/addfloor`;
 
     try {
       const response = await fetch(url, {
@@ -67,7 +67,7 @@ export const FloorProvider = (props) => {
   };
 
   const deleteFloor = async (id) => {
-    const url = `${host}/floor/deletefloor/${id}`;
+    const url = `${host}/api/floor/deletefloor/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -94,7 +94,7 @@ export const FloorProvider = (props) => {
 
   const updateFloor = async (floorItem) => {
     const { id, floor } = floorItem;
-    const url = `${host}/floor/updatefloor/${id}`;
+    const url = `${host}/api/floor/updatefloor/${id}`;
 
     try {
       const response = await fetch(url, {
