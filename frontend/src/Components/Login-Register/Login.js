@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log("HOST = ", process.env.REACT_APP_API_HOST);
     const loggedIn = await loginUser(loginCredentials);
     if (loggedIn) {
       login();
