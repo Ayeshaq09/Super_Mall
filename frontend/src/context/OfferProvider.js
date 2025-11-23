@@ -12,7 +12,7 @@ export const OfferProvider = (props) => {
   const [offers, setOffers] = useState([]);
 
   const fetchOffers = async () => {
-    const url = `${host}/offer/fetchoffers`;
+    const url = `${host}/api/offer/fetchoffers`;
     try {
       const response = await fetch(url, {
         method: "GET",
@@ -37,7 +37,7 @@ export const OfferProvider = (props) => {
   };
 
   const addOffer = async (offer) => {
-    const url = `${host}/offer/addoffer`;
+    const url = `${host}/api/offer/addoffer`;
 
     try {
       const response = await fetch(url, {
@@ -67,7 +67,7 @@ export const OfferProvider = (props) => {
   };
 
   const deleteOffer = async (id) => {
-    const url = `${host}/offer/deleteoffer/${id}`;
+    const url = `${host}/api/offer/deleteoffer/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -94,7 +94,7 @@ export const OfferProvider = (props) => {
 
   const updateOffer = async (offerItem) => {
     const { id, offer, discount } = offerItem;
-    const url = `${host}/offer/updateoffer/${id}`;
+    const url = `${host}/api/offer/updateoffer/${id}`;
 
     try {
       const response = await fetch(url, {
