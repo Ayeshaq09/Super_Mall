@@ -60,7 +60,7 @@ export const UserProvider = (props) => {
   };
 
   const registerUser = async (user) => {
-    const url = `${host}/auth/register`;
+    const url = `${host}/auth/auth/register`;
 
     const { name, email, password } = user;
 
