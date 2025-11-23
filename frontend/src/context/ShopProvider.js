@@ -12,7 +12,7 @@ export const ShopProvider = (props) => {
   const [shops, setShops] = useState(null);
 
   const fetchShops = async () => {
-    const url = `${host}/shop/fetchshops`;
+    const url = `${host}/api/shop/fetchshops`;
 
     try {
       const response = await fetch(url, {
@@ -38,7 +38,7 @@ export const ShopProvider = (props) => {
   };
 
   const addShop = async (shop) => {
-    const url = `${host}/shop/addshop`;
+    const url = `${host}/api/shop/addshop`;
 
     const {
       shopName,
@@ -75,7 +75,7 @@ export const ShopProvider = (props) => {
   };
 
   const deleteShop = async (id) => {
-    const url = `${host}/shop/deleteshop/${id}`;
+    const url = `${host}/api/shop/deleteshop/${id}`;
 
     try {
       const response = await fetch(url, {
@@ -101,7 +101,7 @@ export const ShopProvider = (props) => {
   };
 
   const updateShop = async (id, shop) => {
-    const url = `${host}/shop/updateshop/${id}`;
+    const url = `${host}/api/shop/updateshop/${id}`;
     const {
       shopName,
       mobile,
